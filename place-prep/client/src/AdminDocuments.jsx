@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from "react";
+import { API_BASE_URL } from "./api";
 
 function AdminDocuments() {
   const [documents, setDocuments] = useState([]);
@@ -12,7 +13,7 @@ function AdminDocuments() {
   const fetchDocuments = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/admin/documents"
+        `${API_BASE_URL}/api/admin/documents`
       );
 
       const data = await response.json();
@@ -85,7 +86,7 @@ function AdminDocuments() {
 
                 <td>
                   <a
-                  href={`http://localhost:5000/${document.filePath.replace(/\\/g, "/")}`}
+                  href={`${API_BASE_URL}/${document.filePath.replace(/\\/g, "/")}`}
                     target="_blank"
                     rel="noreferrer"
                   >

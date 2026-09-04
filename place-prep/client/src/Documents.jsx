@@ -1,3 +1,4 @@
+import { API_BASE_URL } from "./api";
 import { useState } from "react";
 import "./Documents.css";
 
@@ -43,7 +44,7 @@ function Documents() {
       formData.append("document", selectedFile);
 
       const response = await fetch(
-        "http://localhost:5000/api/documents/upload",
+        `${API_BASE_URL}/api/documents/upload`,
         {
           method: "POST",
           body: formData,

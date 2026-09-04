@@ -1,3 +1,4 @@
+import { API_BASE_URL } from "./api";
 
 import { useState } from "react";
 
@@ -105,7 +106,7 @@ function AdminQuestions() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/admin/questions",
+        `${API_BASE_URL}/api/admin/questions`,
         {
           method: "POST",
 
