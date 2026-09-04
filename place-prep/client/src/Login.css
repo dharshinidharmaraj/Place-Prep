@@ -1,0 +1,188 @@
+/* ------------------------------
+   Global Login Page
+------------------------------ */
+
+.login-page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  box-sizing: border-box;
+  background: radial-gradient(circle at top left, rgba(79, 145, 255, 0.18), transparent 28%),
+    linear-gradient(135deg, #edf6ff 0%, #dfeeff 45%, #f7fbff 100%);
+}
+
+/* ------------------------------
+   Login Card
+------------------------------ */
+
+.login-card {
+  width: 100%;
+  max-width: 430px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  padding: clamp(26px, 6vw, 42px);
+  border-radius: 22px;
+  border: 1px solid rgba(131, 178, 255, 0.5);
+  box-shadow: 0 22px 60px rgba(12, 57, 116, 0.14);
+}
+
+/* ------------------------------
+   Heading
+------------------------------ */
+
+.login-card h1 {
+  margin: 0;
+  text-align: center;
+  font-size: clamp(28px, 7vw, 36px);
+  line-height: 1.2;
+  color: #102844;
+}
+
+.login-subtitle {
+  margin: 10px 0 clamp(24px, 6vw, 32px);
+  text-align: center;
+  color: #52657f;
+  font-size: clamp(14px, 4vw, 16px);
+}
+
+/* ------------------------------
+   Form
+------------------------------ */
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-card label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #143c71;
+}
+
+.login-card input {
+  width: 100%;
+  min-height: 52px;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border: 1px solid #d3e3ff;
+  border-radius: 12px;
+  background: #f8fbff;
+  color: #112844;
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.login-card input:focus {
+  border-color: #2d73d9;
+  box-shadow: 0 0 0 4px rgba(45, 115, 217, 0.12);
+  background: #ffffff;
+}
+
+/* ------------------------------
+   Login Button
+------------------------------ */
+
+.login-card button {
+  width: 100%;
+  min-height: 52px;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #174ea6 0%, #2d73d9 50%, #4a8cff 100%);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  box-shadow: 0 12px 24px rgba(45, 115, 217, 0.28);
+}
+
+.login-card button:hover {
+  filter: brightness(1.02);
+  box-shadow: 0 14px 28px rgba(45, 115, 217, 0.32);
+}
+
+.login-card button:active {
+  transform: translateY(1px) scale(0.99);
+}
+
+/* ------------------------------
+   Forgot Password
+------------------------------ */
+
+.forgot-password {
+  margin: 22px 0 0;
+  text-align: center;
+  color: #1d57a8;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ------------------------------
+   Small Phones
+------------------------------ */
+
+@media (max-width: 380px) {
+  .login-page {
+    padding: 12px;
+  }
+
+  .login-card {
+    padding: 24px 20px;
+    border-radius: 18px;
+  }
+
+  .login-card input,
+  .login-card button {
+    min-height: 48px;
+  }
+}
+
+/* ------------------------------
+   Landscape Phones
+------------------------------ */
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .login-page {
+    align-items: flex-start;
+    overflow-y: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .login-card {
+    margin: auto;
+  }
+}
+
+/* ------------------------------
+   Tablets
+------------------------------ */
+
+@media (min-width: 768px) {
+  .login-page {
+    padding: 32px;
+  }
+}
+
+/* ------------------------------
+   Large Screens
+------------------------------ */
+
+@media (min-width: 1200px) {
+  .login-card {
+    max-width: 430px;
+  }
+}
