@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "chmod +x ./node_modules/.bin/vite",
     "build": "vite build",
-   "start": "serve --single --listen $PORT dist",
+    "start": "serve -s dist -l $PORT",
     "lint": "eslint .",
     "preview": "vite preview"
   },
