@@ -1,0 +1,4 @@
+{
+  "buildCommand": "npm install --prefix place-prep/client && npm run build --prefix place-prep/client",
+  "startCommand": "node place-prep/client/server.js"
+}
