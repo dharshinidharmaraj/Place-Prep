@@ -1,5 +1,9 @@
 {
-  "buildCommand": "npm install --include=dev && npm run build",
-  "startCommand": "node server.js"
-
+  "$schema": "https://railway.com/railway.schema.json",
+  "build": {
+    "buildCommand": "npm install --include=dev && npm run build"
+  },
+  "deploy": {
+    "startCommand": "node server.js"
+  }
 }
