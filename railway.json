@@ -1,9 +1,0 @@
-{
-  "$schema": "https://railway.com/railway.schema.json",
-  "build": {
-    "buildCommand": "npm install --include=dev --prefix place-prep/client && npm run build --prefix place-prep/client"
-  },
-  "deploy": {
-    "startCommand": "node place-prep/client/server.js"
-  }
-}
